@@ -1,34 +1,51 @@
+:root {
+--clr-primary-200:#F3EED9;
+--clr-primary-300:#F7F3E5;
+--clr-primary-600:#7097A8;
+
+--ff-primary: fantasy,serif;
+--ff-form: fantasy,serif; 
+
+--w-left-panel:40vh
+}
+
 @font-face {
     font-family: signup-font;
     src:url(Daughter\ of\ Fortune.ttf)
 }
 
 *{
-    font-family: signup-font, arial
+    font-family:var(--ff-primary)
 }
 body {
-    height: 100vh
+    height: 100vh;
+    width: 100vw
 }
 
 .container {
     height:inherit;
+    width:inherit;
     display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: var(--clr-primary-600)
 
 }
 .content {
-    height: 80vh;
+    height: 100vh;
+    width: 80vw;
     display:flex;
+
     justify-content: center;
     align-items: center;
+    background-color: var(--clr-primary-300)
    
 
 }
 
 .left-panel{
     height: inherit;
-    width: 40vw;
+    width: 30vw;
     background-image: url(lachlan-dempsey-O14abKtZ5iY-unsplash.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -37,24 +54,87 @@ body {
 }
 .right-panel {
     height: inherit;
-    width: 60vw;
-    background-color: cornsilk;
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+
+ 
+}
+.right-text,
+span {
+
+}
+.form-container{
     flex-direction: column;
+    list-style: none;
+}
+span {
+    height:20em
 }
 
 label, button, #login-text{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--ff-form);
 }
 
 fieldset {
+    border: 0;
+    padding: 0.01em 0 0 0;
+    margin: 0;
+    min-width: 0;
     display: flex;
-    justify-content: space-around;
+    border:none;
 
 }
 
-input, textarea, select, button {
+li,
+.lower-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0em 1em;
+}
+
+/* input, textarea, select, button {
     width : 150px;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+  } */
+
+  /* form copied */
+
+  
+  
+  ul {
+    /* list-style: none; */
+    padding: 1rem 0rem;
+    margin: 0;
   }
+
+  
+  input,
+  textarea {
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+   
+  
+    /* Uniform text field size */
+    width: 150px;
+    box-sizing: border-box; 
+  
+    /* Match form field borders */
+    border: 1px solid #999;
+  }
+  
+  input:focus,
+  textarea:focus {
+    /* Additional highlight for focused elements */
+    border-color: #000;
+  }
+  
+  button {
+      width: 150px;
+      margin: 0 0 1em 0
+  }
+ 
+  
+  
